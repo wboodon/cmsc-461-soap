@@ -1,3 +1,7 @@
+/*
+cat SQL.sql | sqlite3 soap.db
+*/
+
 create table gsaOffice(
 officeName               varchar(20), 
 officeCity                   varchar(20), 
