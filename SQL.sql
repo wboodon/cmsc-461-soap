@@ -1,5 +1,8 @@
 /*
-cat SQL.sql | sqlite3 soap.db
+Execute "sqlite3 soap.db" to create the database, then
+".read SQL.sql" inside SQLite.
+
+https://stackoverflow.com/questions/11643611/execute-sqlite-script
 */
 
 create table gsaOffice(
