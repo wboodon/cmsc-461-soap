@@ -18,69 +18,34 @@ tables. Really unclear if we should be displaying specific things or not.
 create table gsaOffice(
 officeName               varchar(20), 
 officeCity                   varchar(20), 
-footageManages       numeric(8,2).
-primary key (officeName))
-insert into gsaOffice values (‘Red Office’, ’Baltimore’, 6000.00); 
-delete from gsaOffice;
-drop table gsaOffice;
-select  * from gsaOffice;
- 
- 
- 
+footageManages       numeric(8,2),
+primary key (officeName));
+
 create table managesAgency(
 officeName           varchar(20),
 agencyID              numeric(8,0),
-primary key (officeName, agencyID))
-insert into managesAgency values (‘Yellow Office’, 57342842); 
-delete from managesAgency;
-drop table managesAgency;
-select  *  from managesAgency;
- 
- 
- 
+primary key (officeName, agencyID));
+
 create table customerAgencies(
 agencyID              numeric(8,0),
 agencyName        varchar(20),
 agencyAddress     varchar(20) not null,
 agencyCity            varchar(20),
-agencyPhone        numeric(10,0))
-primary key (agencyID))
-insert into customerAgency values (33427742, ‘NSA’, ‘500 Defense Hwy’, ‘Fort Meade’, 4102220000); 
-delete from customerAgencies;
-drop table customerAgencies;
-select  *  from customerAgencies;
- 
- 
- 
+agencyPhone        numeric(10,0)),
+primary key (agencyID));
+
 create table managesAgreements(
- officeName      varchar(20),
- uid                    numeric(8,0) 
-primary key (officeName, uid))
-insert into managesAgreements values (‘Purple Office’, 10952642); 
-delete from managesAgreements;
-drop table managesAgreements;
-select  *  from managesAgreements;
- 
- 
- 
- 
+officeName      varchar(20),
+uid                    numeric(8,0),
+primary key (officeName, uid));
+
 create table rentalAgreement(
 uid	                  numeric(8,0),
 rentAmount        numeric(10,2),
-endDate              numeric(8,0))      
-primary key (uid))
-insert into rentalAgreement values (90942642, 3401.75, 12312021); 
-delete from rentalAgreement;
-drop table rentalAgreement;
-select  *  from rentalAgreement;
- 
- 
- 
+endDate              numeric(8,0)),   
+primary key (uid));
+
 create table has(
 agencyID         numeric(8,0),
-uid                    numeric(8,0))
-primary key (agencyID, uid))
-insert into has values (8842611, 83427611); 
-drop table has;
-delete from has;
-select  *  from has;
+uid                    numeric(8,0)),
+primary key (agencyID, uid));
