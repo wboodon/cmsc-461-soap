@@ -12,12 +12,6 @@ create table gsaOffice
   primary key (officeName)
   );
 
-create table managesAgency
- (officeName               varchar(20),
-  agencyID                  numeric(8,0),
-  primary key (officeName, agencyID)
-  );
-
 create table customerAgencies
  (agencyID                 numeric(8,0),
   agencyName                varchar(20),
