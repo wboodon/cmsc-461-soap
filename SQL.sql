@@ -1,20 +1,3 @@
-/*
-The project description says: "bulk load data into tables from csv files,
-erase the tables, insert a record into the tables, delete a record from
-the tables, and select records from the tables".
-
-The bulk load data into tables is done. 
-
-"Drop table" erases the table, aka done.
-
-We inserted fake info into each table.
- 
-We technically deleted all the info from the tables with the command we
-used, but if you use a where clause and say the data you want to find to
-delete we can also do that. We selected to display all info from the
-tables. Really unclear if we should be displaying specific things or not.
-*/
-
 create table gsaOffice(
 officeName               varchar(20), 
 officeCity                   varchar(20), 
