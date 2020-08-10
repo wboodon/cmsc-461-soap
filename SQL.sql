@@ -27,7 +27,12 @@ primary key (agencyID));
 create table managesAgreements(
 officeName      varchar(20),
 uid                    numeric(8,0),
-primary key (officeName, uid));
+primary key (officeName, uid)
+foreign key (officeName) references gsaOffice
+  on delete set null
+foreign key (uid) references rentalAgreement
+  on delete set null
+);
 
 create table rentalAgreement(
 uid	                  numeric(8,0),
@@ -38,4 +43,9 @@ primary key (uid));
 create table has(
 agencyID         numeric(8,0),
 uid                    numeric(8,0)),
-primary key (agencyID, uid));
+primary key (agencyID, uid)
+foreign key (agencyID) references customerAgencies
+  on delete set null
+foreign key (uid) references rentalAgreement
+  on delete set null
+);
